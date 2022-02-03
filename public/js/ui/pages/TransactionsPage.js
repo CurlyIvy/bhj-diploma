@@ -58,7 +58,7 @@ class TransactionsPage {
     let isApply = confirm("Вы действительно хотите удалить счёт?");
     if(isApply) {
       Entity.URL = Account.URL;
-      Account.remove({ account_id: this.lastOptions.account_id }, this.onAccountRemoved.bind(this));
+      Account.remove({ 'id': this.lastOptions.account_id }, this.onAccountRemoved.bind(this));
     }
   }
 
